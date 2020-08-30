@@ -1,0 +1,28 @@
+.img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.editor {
+    margin-top: 40px;
+}
+
+@media only screen and (min-width: 600px) {
+    .editor {
+        margin: 40px;
+    }
+  }
+
+.dropdown-toggle::after {
+    display: none;
+    
+}
+
+.dropdown-toggle {
+    border-radius: 50%;
+    padding: 0;
+    background-color: white !important;
+    border: none !important;
+}
+
