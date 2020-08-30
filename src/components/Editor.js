@@ -1,23 +1,17 @@
-import React, { Component } from 'react';
-import ReactQuill from 'react-quill';;
+import React, {useState} from 'react';
+import ReactQuill from 'react-quill';
 
-export default class Editor extends Component {
+export default function Editor() {
 
-    constructor(props) {
-        super(props);
-        this.state = { text: "" };
-        this.handleChange = this.handleChange.bind(this);
+    const [text, setText] = useState(0);
+
+    function handleChange(value) {
+        setText(value);
     }
-    handleChange(value) {
-        this.setState({ text: value })
-    }
-    render() {
-        return (
-            <div className = "editor">
-                 <ReactQuill value={this.state.text}
-                  onChange={this.handleChange} />
-            </div>
-           
-        )
-    }
+    return (
+        <div className = "editor">
+            <ReactQuill value={text}
+             onChange={handleChange} />
+        </div>
+    )
 }
